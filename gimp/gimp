@@ -1,0 +1,7 @@
+xhost local:$USER
+docker run -it \
+    -e DISPLAY=unix$DISPLAY \
+    --privileged \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    -v $HOME:/home/ \
+    jamesnetherton/gimp
